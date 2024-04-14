@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+
+    <h1><center>Create A New Task</center></h1>
+    <hr>
+    <div class="employee-form">
+        <form onsubmit="event.preventDefault();onSubmitForm()">
+            <div>
+                <label>Full Name*</label>
+                <label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                <input type="text" name="fullName" id="fullName" />
+            </div>
+            <div>
+                <label>Email Id</label>
+                <input type="email" name="email" id="email" />
+            </div>
+            <div>
+                <label>Task Name</label>
+                <input type="text" name="taskName" id="task" />
+            </div>
+            <div>
+                <label>Task Progress</label>
+                <input type="checkbox" id="chkbox" value="yes" name="chkbox" />
+            </div>
+            <div  class="form-action-buttons">
+                <input type="submit" value="Add Task">
+            </div>
+
+        </form>
+    </div>
+    <br/>
+    <div class = "employees-table">
+        <h3>
+            <span>Task List</span>
+            <input type="text" placeholder="Search..." class="form-control search-input"  id="searchInput" 
+            onkeyup="searchItems()" 
+            />
+        </h3>
+
+        <table class="list employee-list" id="employeeList">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email Id</th>
+                    <th>Task Name</th>
+                    <th>Task Progress</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+</div>
+
+    <script src='main.js'></script>
+
+</body>
+</html>
